@@ -1,6 +1,7 @@
 button{
     transition: .5s;
     margin-left: 10px;
+    font-weight: 600;
 }
 button:hover{
     background-color: rgba(0, 0, 0, 0.856);

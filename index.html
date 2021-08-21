@@ -29,20 +29,23 @@
 
                 <div>
                     <h2 class="text-xl font-bold text-blue-800 mb-4 mt-4">Memory</h2>
-                    <button class="p-2 border-2 border-gray-900 rounded">8GB unified memory</button>
-                    <button class="p-2 border-2 border-gray-900 rounded">8GB unified memory</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="memory-one">8GB unified memory</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="memory-two">16GB unified memory</button>
 
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-blue-800 mb-4 mt-4">Storage</h2>
-                    <button class="p-2 border-2 border-gray-900 rounded">256GB SSD Storage</button>
-                    <button class="p-2 border-2 border-gray-900 rounded">512GB SSD Storage</button>
-                    <button class="p-2 border-2 border-gray-900 rounded">1TB SSD Storage</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="storage-one">256GB SSD Storage</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="storage-two">512GB SSD Storage</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="storage-three">1TB SSD Storage</button>
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-blue-800 mb-4 mt-4">Choose your delivary option</h2>
-                    <button class="p-2 border-2 border-gray-900 rounded">Friday, Aug 25 Free Prime Delivay</button>
-                    <button class="p-2 border-2 border-gray-900 rounded">Friday, Aug 21 Delivay Charge $20</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="delivary-one">Friday, Aug 25 Free Prime
+                        Delivay</button>
+                    <button class="p-2 border-2 border-gray-900 rounded" id="delivary-two">Friday, Aug 21 Delivay
+                        Charge
+                        $20</button>
 
                 </div>
                 <!------------------ Total Price------------- -->
@@ -51,24 +54,24 @@
                         <tbody class="text-2xl font-medium">
                             <tr>
                                 <td>Best Price</td>
-                                <td>$1299</td>
+                                <td>$<span id="best-price">1299</span></td>
                             </tr>
 
                             <tr>
                                 <td>Extra memory cost</td>
-                                <td>$0</td>
+                                <td>$<span id="memory-price">0</span></td>
                             </tr>
                             <tr>
                                 <td>Extra storage cost</td>
-                                <td>$0</td>
+                                <td>$<span id="storage-price">0</span></td>
                             </tr>
                             <tr>
                                 <td>Delivary charge</td>
-                                <td>$0</td>
+                                <td>$<span id="delivary-price">0</span></td>
                             </tr>
                             <tr class="last-tr">
                                 <td>Total Price</td>
-                                <td>$0</td>
+                                <td>$<span id="total-price">1299</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -78,13 +81,14 @@
 
                 <div class="promo-code my-5">
                     <h2 class="text-xl font-bold text-blue-800 mb-1 mt-">Add Promo code</h2>
-                    <input type="text" class="border-2 border-gray-600 p-2 w-2/4">
-                    <button class="bg-red-400 px-5 py-2 text-xl rounded">Apply</button>
+                    <input type="text" class="border-2 border-gray-600 p-2 w-2/4" id="promo-input">
+                    <button class="bg-red-400 px-5 py-2 text-xl rounded" id="promo-button">Apply</button>
                 </div>
 
                 <!-- total amount -->
                 <div class="total">
-                    <h2 class="text-4xl font-bold text-blue-800 mb-4 mt-4">Total: $00</h2>
+                    <h2 class="text-4xl font-bold text-blue-800 mb-4 mt-4">Total: $<span id="final-total">1299</span>
+                    </h2>
                 </div>
 
             </div>
