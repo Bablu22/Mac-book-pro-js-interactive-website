@@ -72,6 +72,8 @@ function promoAdd() {
         return finalTotal.innerText = discountAmount;
     }
 }
+
+// Add eventListener function
 function buttonEvent(buttonId, functionName, price) {
     document.getElementById(buttonId).addEventListener('click', function (a) {
         price.innerText = functionName;
