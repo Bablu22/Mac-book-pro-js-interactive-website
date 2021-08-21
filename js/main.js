@@ -11,6 +11,17 @@ const promoInput = document.getElementById('promo-input');
 // Final Total
 const finalTotal = document.getElementById(('final-total'));
 
+function totalAmount() {
+    const memoryCost = parseInt(memoryPrice.innerText);
+    const bestCost = parseFloat(bestPrice.innerText);
+    const storageCost = parseFloat(storagePrice.innerText);
+    const delivaryCost = parseFloat(delivaryPrice.innerText);
+    const total = bestCost + memoryCost + storageCost + delivaryCost;
+    totalPrice.innerText = total;
+    finalTotal.innerText = total;
+}
+
+// memory cost function
 function memoryTotal(memory) {
     // Memory
     if (memory == true) {
@@ -19,15 +30,12 @@ function memoryTotal(memory) {
     if (memory == false) {
         memoryPrice.innerText = 180;
     }
-    const memoryCost = parseInt(memoryPrice.innerText);
-    const bestCost = parseFloat(bestPrice.innerText);
-    const total = bestCost + memoryCost;
-    totalPrice.innerText = total;
-    finalTotal.innerText = total;
 
+    totalAmount()
     storageTotal()
     delivaryTotal()
 }
+// storage cost funcction
 function storageTotal(storage) {
     // Memory
     if (storage == '256gb') {
@@ -40,15 +48,11 @@ function storageTotal(storage) {
         storagePrice.innerText = 180;
     }
 
-    const memoryCost = parseFloat(memoryPrice.innerText);
-    const storageCost = parseFloat(storagePrice.innerText);
-    const bestCost = parseFloat(bestPrice.innerText);
-    const total = bestCost + memoryCost + storageCost;
-    totalPrice.innerText = total;
-    finalTotal.innerText = total;
 
+    totalAmount()
     delivaryTotal()
 }
+// delivary cost function
 function delivaryTotal(delivary) {
     if (delivary == 'free') {
         delivaryPrice.innerText = 0;
@@ -56,18 +60,9 @@ function delivaryTotal(delivary) {
     if (delivary == 'charge') {
         delivaryPrice.innerText = 20;
     }
-
-
-    const memoryCost = parseFloat(memoryPrice.innerText);
-    const storageCost = parseFloat(storagePrice.innerText);
-    const bestCost = parseFloat(bestPrice.innerText);
-    const delivaryCost = parseFloat(delivaryPrice.innerText);
-    const total = bestCost + memoryCost + storageCost + delivaryCost;
-    totalPrice.innerText = total;
-    finalTotal.innerText = total;
-
+    totalAmount()
 }
-
+// Promo code function
 function promoAdd() {
     const promoValue = promoInput.value;
     const total = parseFloat(totalPrice.innerText)
@@ -79,14 +74,6 @@ function promoAdd() {
 
 }
 
-
-
-
-
-
-
-
-
 // Memory
 const firstMemory = document.getElementById('memory-one').addEventListener('click', function () {
     memoryTotal(true)
@@ -94,7 +81,6 @@ const firstMemory = document.getElementById('memory-one').addEventListener('clic
 const secondMemory = document.getElementById('memory-two').addEventListener('click', function () {
     memoryTotal(false)
 })
-
 // storage
 const firstStorage = document.getElementById('storage-one').addEventListener('click', function () {
     storageTotal('256gb')
